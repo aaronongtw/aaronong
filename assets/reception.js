@@ -6,7 +6,7 @@ var loadAI = function() {
         age()
         AIresponse([' Hi there, How can I help you today? (Local Storage Intelligence Loaded)'])
     } else {
-        $.getJSON("AI.json", function(json) {
+        $.getJSON("assets/AI.json", function(json) {
             responses = json;
             age()
             AIresponse([' Good Day, How can I help you today?'])
