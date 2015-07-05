@@ -38,6 +38,11 @@ var helpButton = function() {
     AIresponse(["For quick access to 'About Aaron', simply type 'ls'. You may also talk to me to navigate around the website. I have also been programmed to learn from you if I do not understand."])
 }
 
+var lsButton = function(){
+    $('#typeBox').html('Desk:  <span class="element"></span>')
+    AIresponse(["**cd to load(eg. cd Portfolio)**<br><span class='ls'>Portfolio</span><span class='ls lsr1'>GitStats</span><br><span class='ls'>Experience</span><span class='ls lsr2'>Education</span><br><span class='ls'>Skills</span><span class='ls lsr3'>Contact</span>"])
+}
+
 var startForm = function() {
     $('form').on('submit', function(e) {
         clearScreen()
@@ -156,6 +161,7 @@ var minimizeAI = function() {
         'width' : '20%',
         'left' :'110%'
     })
+    $('i').hide()
     $('#userInput').on('click',function(){
         maximizeAI()
     })
@@ -164,7 +170,7 @@ var minimizeAI = function() {
 var minimizeAItoLeft = function() {
     TweenMax.to('.box',1.5, {
         'opacity':'0.8',
-        'width' : '20%',
+        'width' : '30%',
         'left' : '5%',
         'top' : '60%',
         'height': '30%'
@@ -174,6 +180,7 @@ var minimizeAItoLeft = function() {
         'width' : '20%',
         'left' :'40%'
     })
+    $('i').hide()
     $('#userInput').on('click',function(){
         maximizeAI()
     })
@@ -191,6 +198,7 @@ var maximizeAI = function() {
         'left' :'50%',
         'width' : '75%'
     })
+    $('i').show()
 }
 
 
