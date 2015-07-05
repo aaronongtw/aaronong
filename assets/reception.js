@@ -33,6 +33,11 @@ var age;
 var clientName
 
 
+var helpButton = function() {
+    $('#typeBox').html('Desk:  <span class="element"></span>')
+    AIresponse(["For quick access to 'About Aaron', simply type 'ls'. You may also talk to me to navigate around the website. I have also been programmed to learn from you if I do not understand."])
+}
+
 var startForm = function() {
     $('form').on('submit', function(e) {
         clearScreen()

@@ -1,4 +1,4 @@
-var test
+
 $(document).ready(function() {
     $('#begin').on('mouseover', function() {
         whiteOUt = TweenMax.to('.whiteout', 1, {
@@ -45,6 +45,9 @@ $(document).ready(function() {
 
                 loadAI()
                 $('#begin').hide()
+                $('.fa-question-circle').on('click', function(){
+                    helpButton()
+                })
             }
         })
     }
@@ -139,7 +142,7 @@ var loadExperience = function() {
         'height': '50%',
         'margin': 'auto'
     })
-    $('#interact').append("<h3 class='jMain'>Chook & Broosky : Director</h3><h4 class='jDate'>2014-current</h4><h5 class='jDesc'>Involved in every aspect of establishing the businesss from legal & accounting decisions, recipe & menu design, interior design & assembly, to marketing & branding.</h5><hr><h3 class='jMain'>University of Newcastle : Casual Academic & Research Assistant</h3><h4 class='jDate'>2013-2014</h4><h5 class='jDesc'>Tutored second year Finance Subjects. Involved in minor research projects.</h5><hr><h3 class='jMain'>Refs Inc. | SuperSevens : Professional Paintball Referee</h3><h4 class='jDate'>2007-2012</h4><h5 class='jDesc'>Travelled around Australia and Asia part of a Paintball Professional Marshall body.<hr><h3 class='jMain'>Bar on The Hill : DJ</h3><h4 class='jDate'>2008-2010</h4><h5 class='jDesc'>Resident DJ at a club and did many private gigs. Running a small private DJ and equipment service at the same time.</h5>")
+    $('#interact').append("<h3 class='jMain'>Chook & Broosky : Director</h3><h4 class='jDate'>2014-current</h4><h5 class='jDesc'>Involved in every aspect of establishing the businesss from legal & accounting decisions, recipe & menu design, interior design & assembly, to marketing & branding.</h5><hr><h3 class='jMain'>University of Newcastle : Casual Academic & Graduate Research Assistant</h3><h4 class='jDate'>2013-2014</h4><h5 class='jDesc'>Tutored second year Finance Subjects. Conducted research aimed for completion of PhD and publication. Research topic was 'Idiosyncratic Risk and Asymmetric Equity Return Distribution.</h5><hr><h3 class='jMain'>Refs Inc. | SuperSevens : Professional Paintball Referee</h3><h4 class='jDate'>2007-2012</h4><h5 class='jDesc'>Travelled around Australia and Asia part of a Paintball Professional Marshall body.<hr><h3 class='jMain'>Bar on The Hill : DJ</h3><h4 class='jDate'>2008-2010</h4><h5 class='jDesc'>Resident DJ at a club and did many private gigs. Running a small private DJ and equipment service at the same time.</h5>")
     minimizeAI()
 }
 
@@ -151,7 +154,7 @@ var loadEducation = function() {
         'height': '50%',
         'margin': 'auto'
     })
-    $('#interact').append("<h3 class='jMain'>General Assembly : Web Development Immersive</h3><h4 class='jDate'>May 2015 - July 2015</h4><h5 class='jDesc'>Full Stack immersive. Course covered HTML, CSS, JavaScript, Ruby, Ruby on Rails, Advanced JS, Advanced Ruby and rSpec.</h5><hr><h3 class='jMain'>University of Newcastle : Masters of Applied Finance</h3><h4 class='jDate'>2012<h4><hr><h3 class='jMain'>University of Newcastle : Bachelor of Commerce, Finance & Economics Major</h3><h4 class='jDate'>2008-2011<h4><hr>")
+    $('#interact').append("<h3 class='jMain'>General Assembly : Web Development Immersive</h3><h4 class='jDate'>May 2015 - July 2015</h4><h5 class='jDesc'>Full Stack immersive. Course covered HTML, CSS, JavaScript, Ruby, Ruby on Rails, Advanced JS, Advanced Ruby and rSpec.</h5><hr><h3 class='jMain'>University of Newcastle : Research Methodology</h3><h4 class='jDate'>2013<h4><hr><h3 class='jMain'>University of Newcastle : Masters of Applied Finance</h3><h4 class='jDate'>2012<h4><hr><h3 class='jMain'>University of Newcastle : Bachelor of Commerce, Finance & Economics Major</h3><h4 class='jDate'>2008-2011<h4><hr>")
     minimizeAI()
 }
 
