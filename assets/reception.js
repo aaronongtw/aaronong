@@ -9,7 +9,7 @@ var loadAI = function() {
         $.getJSON("assets/AI.json", function(json) {
             responses = json;
             age()
-            AIresponse([' Good Day, How can I help you today?'])
+            AIresponse(['Hi there, How can I help you today?'])
         })
     }
 }
@@ -67,6 +67,7 @@ var startForm = function() {
                 aboutFlag = false;
             } else {
                 aboutFlag = false;
+                AIresponse(['So what can I do for you then?'])
             }
         } else {
             if (Levenshtein(userInput, "I don't understand") < 5 || Levenshtein(userInput, "That doesn't make sense") < 5) {
