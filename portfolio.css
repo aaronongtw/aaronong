@@ -1,0 +1,211 @@
+html body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#startTitle {
+    line-height: 100%;
+    text-align: center;
+    font-family: Unica One;
+    cursor: pointer;
+    padding: 10px;
+    letter-spacing: 0.4em;
+}
+
+.box {
+    display: none;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    margin: 0px auto;
+    width: 0%;
+    height: 25%;
+    font-family: Iceland;
+    font-size: 130%
+}
+
+#begin {
+    color: rgba(255, 100, 100, 1);
+    cursor: pointer;
+}
+
+.subsentence {
+    color: rgba(100, 160, 115, 1);
+}
+
+.whiteout {
+    color: rgba(0, 0, 0, 1);
+}
+
+#interact {
+    clear: both;
+    text-align: center;
+    font-family: Unica One;
+}
+
+.repobar {
+    width: 14px;
+    background-color: rgba(255,200,200,0.5);
+    display: inline-block;
+    word-wrap: break-word;
+    margin: 20px;
+    vertical-align: text-bottom;
+    font-family: Comfortaa;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+.ls {
+  padding-left: 50px;
+  color: turquoise;
+}
+
+.lsr1{
+  margin-left: 80px;
+}
+.lsr2{
+  margin-left: 66px;
+}
+.lsr3{
+  margin-left: 111px;
+}
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.box #typeBox {
+    padding-top: 1%;
+    padding-left: 2%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+}
+
+.box #inputBox {
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#userInput {
+    margin-top: 1%;
+    height: 5%;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    width: 0%;
+    position: fixed;
+    left: 50%;
+    margin: 0 0 0 0;
+    padding: 3px;
+    border: 1px solid white;
+    font-family: Iceland;
+    font-size: 90%;
+}
+
+#submit {
+    display: none;
+    background-color: rgba(40, 40, 40, 1);
+    color: white;
+    margin: auto;
+    width: 18%;
+    border: 1px solid white;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.jMain {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.jDate {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.jDesc {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#skillmap .skills-wrapper {
+  margin-top: 10px;
+  overflow: auto;
+}
+#skillmap .skills-sunburst {
+  float: left;
+  width: 500px;
+  margin-left: -80px;
+}
+#skillmap .skills-sunburst svg {
+  font: 11px 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+}
+#skillmap .skills-chart {
+  float: right;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  margin: 80px 20px 0 0;
+}
+#skillmap .skills-chart .breadcumb-text {
+  font-size: 13px;
+  font-weight: 700;
+}
+#skillmap .skills-chart #skills-chart-line {
+  fill: none;
+  stroke-width: 3.5px;
+}
+#skillmap .skills-chart .axis path,
+#skillmap .skills-chart .axis line {
+  fill: none;
+}
+#skillmap .skills-chart .x-axis path,
+#skillmap .skills-chart .y-axis path {
+  stroke: #444;
+  stroke-width: 1px;
+  shape-rendering: geometricPrecision;
+}
