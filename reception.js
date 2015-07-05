@@ -6,7 +6,7 @@ var loadAI = function() {
         age()
         AIresponse([' Hi there, How can I help you today? (Local Storage Intelligence Loaded)'])
     } else {
-        $.getJSON("ai.json", function(json) {
+        $.getJSON("AI.json", function(json) {
             responses = json;
             age()
             AIresponse([' Good Day, How can I help you today?'])
@@ -126,7 +126,7 @@ var createListeners = function() {
         else if (where == "Education")
             loadEducation()
         else if (where == "Skills")
-            loadSKills()
+            loadSkills()
     })
 }
 

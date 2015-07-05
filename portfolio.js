@@ -1,3 +1,4 @@
+var test
 $(document).ready(function() {
     $('#begin').on('mouseover', function() {
         whiteOUt = TweenMax.to('.whiteout', 1, {
@@ -70,8 +71,9 @@ var loadGit = function() {
 
 var displayGitInfo = function(info) {
     for (var i = 0; i < info.length; i++) {
-        $('#interact').append('<div id="' + info[i].name + '" class="repobar">' + info[i].name + '</div>')
-        var barID = '#' + info[i].name
+        var name = info[i].name.split('.')[0]
+        $('#interact').append('<div id="' + name + '" class="repobar">' + name + '</div>')
+        var barID = '#' + name
         var color;
         if (info[i].language == "JavaScript")
             color = 'palegoldenrod'
@@ -85,7 +87,7 @@ var displayGitInfo = function(info) {
             color = 'papayawhip'
         var height = (Math.log(info[i].size) * 10) + 'px'
 
-        gitStats(info[i].name, info[i].language)
+        gitStats(info[i].name)
         growBar = TweenMax.to(barID, 3, {
             'height': '80px',
             'background': color
@@ -98,21 +100,20 @@ var gitStats = function(name) {
         url: "https://api.github.com/repos/aaronongtw/" + name + "/languages",
         dataType: 'json',
     }).done(function(commitdata) {
-
-        thisID = '#' + name
+        thisID = '#' + name.split('.')[0]
         $(thisID).on('mouseover', function() {
           $('#typeBox').html('Desk:  <span class="element"></span>')
           gitAIResponse = "<br>"
           if (commitdata.JavaScript != null)
-            gitAIResponse += "Javascript :" + commitdata.JavaScript + "<br>"
+            gitAIResponse += "Javascript: " + commitdata.JavaScript + " Chars <br>"
           if (commitdata.Ruby != null)
-            gitAIResponse += "Ruby :" + commitdata.Ruby + "<br>"
+            gitAIResponse += "Ruby : " + commitdata.Ruby + " Chars <br>"
           if (commitdata.HTML != null)
-            gitAIResponse += "HTML :" + commitdata.HTML + "<br>"
+            gitAIResponse += "HTML : " + commitdata.HTML + " Chars <br>"
           if (commitdata.CSS != null)
-            gitAIResponse += "CSS :" + commitdata.CSS + "<br>"
+            gitAIResponse += "CSS : " + commitdata.CSS + " Chars <br>"
           if (commitdata.Python != null)
-            gitAIResponse += "Python :" + commitdata.Python + "<br>"
+            gitAIResponse += "Python : " + commitdata.Python + " Chars <br>"
           AIresponse([gitAIResponse])
         })
     })

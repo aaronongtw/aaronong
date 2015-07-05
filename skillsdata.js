@@ -35,9 +35,9 @@ skillsdata = {
                     "Cucumber": [0, 0, 0, 0, 0, 0, 5, 30]
                 }
             },
-            "Script": {
+            "Languages": {
+                "GoLang": [0, 0, 0, 0, 0, 0, 0, 20],
                 "Javascript": [0, 0, 0, 0, 0, 0, 0, 80],
-                "CoffeeScript": [0, 0, 0, 0, 0, 0, 0, 20],
                 "Python": [0, 0, 0, 0, 0, 0, 0, 30],
                 "Ruby": [0, 0, 0, 0, 0, 0, 0, 80],
             }
