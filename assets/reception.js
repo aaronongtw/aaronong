@@ -55,16 +55,16 @@ var startForm = function() {
         responseID = -1
         userInput = $('#userInput').val()
         levDistance = 10
-        if (Levenshtein(userInput, "cd GitStats") < 3) {
+        if (userInput.match(/.*\b(gitstat|repo|github)/i) != null) {
             loadGit()
         }
-        else if (Levenshtein(userInput, "cd Contact") < 3) {
+        else if (userInput.match(/.*\b(contact|get in touch|phone|email|linkedin|linked in|mobile)/i) != null) {
             loadContact()
-        } else if (Levenshtein(userInput, "cd Experience") < 3) {
+        } else if (userInput.match(/.*\b(experience|background|work)/i) != null) {
             loadExperience() 
-        } else if (Levenshtein(userInput, "cd Education") < 3) {
+        } else if (userInput.match(/.*\b(qualification|education|school|uni|college)/i) != null) {
             loadEducation()
-        } else if (Levenshtein(userInput, "cd Skills") < 3) {
+        } else if (userInput.match(/.*\b(skill|ability|abilities|language|framework|[front end|frontend]|[back end|backend]|stack|javascript|ruby|html|css|design)/i) != null) {
             loadSkills()
         } else if (learnFlag == true) {
             responses.push(userInitialComment)
