@@ -64,7 +64,7 @@ var startForm = function() {
             loadExperience() 
         } else if (userInput.match(/.*\b(qualification|education|school|uni|college)/i) != null) {
             loadEducation()
-        } else if (userInput.match(/.*\b(skill|ability|abilities|language|framework|[front end|frontend]|[back end|backend]|stack|javascript|ruby|html|css|design)/i) != null) {
+        } else if (userInput.match(/.*\b(skill|ability|abilities|language|framework|frontend]|backend|back end|front end|stack|javascript|ruby|html|css|design)\b/i) != null) {
             loadSkills()
         } else if (learnFlag == true) {
             responses.push(userInitialComment)
