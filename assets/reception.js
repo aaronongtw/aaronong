@@ -69,7 +69,7 @@ var startForm = function() {
         } else if (learnFlag == true) {
             responses.push(userInitialComment)
             responses.push(userInput)
-            gratitudeResponse = ["Thank you", "Updating my AI^1000...", "Done. The updates are only applied to your local DOM due to my lack of back end the moment."]
+            gratitudeResponse = ["Thank you", "Updating my AI^1000...", "Done. The updates are only saved locally in your browser."]
             console.log('learning...')
             AIresponse(gratitudeResponse)
             localStorage.setItem('aotwAI', JSON.stringify(responses));
