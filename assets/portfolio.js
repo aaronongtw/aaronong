@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+            var autoStart = setTimeout(function(){
+                startAI()
+                startForm()
+            },6000)
+
             $('#begin').on('mouseover', function() {
                 whiteOUt = TweenMax.to('.whiteout', 1, {
                     'color': 'white'
@@ -13,6 +19,7 @@ $(document).ready(function() {
 
 
             $('#begin').on('click', function() {
+                clearTimeout(autoStart)
                 startAI();
                 startForm()
             })
