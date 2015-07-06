@@ -45,6 +45,10 @@ var lsButton = function(){
 
 var startForm = function() {
     $('form').on('submit', function(e) {
+        // if ($('#userInput').val().length > 400) {
+        //     $('#typeBox').html('Desk:  <span class="element"></span>')
+                
+        // }
         clearScreen()
         e.preventDefault()
         $('#typeBox').html('Desk:  <span class="element"></span>')
@@ -103,6 +107,10 @@ var startForm = function() {
                     } else if (responses[responseID] == "!Aaron") {
                         aboutFlag = true;
                         AIresponse(['Aaron is my creator. Would you like to know more about him?'])
+                    } else if (responses[responseID] == "!Time") {
+                        var dt = new Date();
+                        var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+                        AIresponse(['The time now is ' + time])                        
                     } else {
                         AIresponse([responses[responseID]])
                     }
