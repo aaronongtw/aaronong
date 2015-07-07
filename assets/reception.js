@@ -59,11 +59,11 @@ var startForm = function() {
         }
         else if (userInput.match(/.*\b(contact|get in touch|phone|email|linkedin|linked in|mobile)/i) != null) {
             loadContact()
-        } else if (userInput.match(/.*\b(experience|background|work)/i) != null) {
+        } else if (userInput.match(/.*\b(experience|experiences|background|work)/i) != null) {
             loadExperience() 
         } else if (userInput.match(/.*\b(qualification|education|school|uni|college)/i) != null) {
             loadEducation()
-        } else if (userInput.match(/.*\b(skill|ability|abilities|language|framework|frontend]|backend|back end|front end|stack|javascript|ruby|html|css|design)\b/i) != null) {
+        } else if (userInput.match(/.*\b(skill|skills|ability|abilities|language|framework|frontend]|backend|back end|front end|stack|javascript|ruby|html|css|design)\b/i) != null) {
             loadSkills()
         } else if (learnFlag == true) {
             responses.push(userInitialComment)
