@@ -61,25 +61,23 @@ var startAI = function() {
         'left': '10%',
         'width': '80%',
         'height': '20%',
-        onComplete: function() {
-            userInputReveal = TweenMax.to('#userInput', 0.5, {
-                'width': '75%',
-                'margin': '0 0 0 -37.5%'
-            })
+    })
+    userInputReveal = TweenMax.to('#userInput', 0.5, {
+        'width': '75%',
+        'margin': '0 0 0 -37.5%'
+    })
 
-            loadAI()
-            $('#begin').hide()
-            $('.fa-question-circle').on('click', function() {
-                helpButton()
-            })
-            $('.fa-list').on('click', function() {
-                lsButton()
-            })
-
-        }
+    loadAI()
+    $('#begin').hide()
+    $('.fa-question-circle').on('click', function() {
+        helpButton()
+    })
+    $('.fa-list').on('click', function() {
+        lsButton()
     })
 
 }
+
 
 
 

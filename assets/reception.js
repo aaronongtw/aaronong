@@ -164,11 +164,12 @@ var minimizeAI = function() {
         'left' : '70%'
     })
     TweenMax.to('#userInput',1.5, {
-        'opacity':'0.2',
+        'opacity':'1',
         'width' : '20%',
         'left' :'110%'
     })
     $('i').hide()
+    $('#userInput').attr('placeholder','CLICK ME TO RETURN')
     $('#userInput').on('click',function(){
         maximizeAI()
     })
@@ -183,10 +184,11 @@ var minimizeAItoLeft = function() {
         'height': '30%'
     })
     TweenMax.to('#userInput',1.5, {
-        'opacity':'0.2',
+        'opacity':'1',
         'width' : '20%',
         'left' :'40%'
     })
+    $('#userInput').attr('placeholder','CLICK ME TO RETURN')
     $('i').hide()
     $('#userInput').on('click',function(){
         maximizeAI()
@@ -205,6 +207,8 @@ var maximizeAI = function() {
         'left' :'50%',
         'width' : '75%'
     })
+    $('#userInput').attr('placeholder',"LS for directory information. You can also just ask me questions. If i don't understand. I will learn from you.")
+    location.hash = ''
     $('i').show()
 }
 
@@ -215,7 +219,6 @@ var clearScreen = function() {
 }
 
 var AIresponse = function(reply) {
-    location.hash = "main"
     $('#userInput').val('').focus()
     $(".element").typed({
         contentType: 'html',
