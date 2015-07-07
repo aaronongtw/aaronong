@@ -1,6 +1,5 @@
 var responses = [];
 var loadAI = function() {
-    console.log('check')
     if (JSON.parse(localStorage.getItem('aotwAI')) != null) {
         responses = JSON.parse(localStorage.getItem('aotwAI'))
         age()
@@ -216,6 +215,7 @@ var clearScreen = function() {
 }
 
 var AIresponse = function(reply) {
+    location.hash = "main"
     $('#userInput').val('').focus()
     $(".element").typed({
         contentType: 'html',
