@@ -18,6 +18,18 @@ a {
   color:black;
 }
 
+.portfolioImages {
+  display:inline-block;
+  height:100px;
+  width:100px;
+  -webkit-filter : grayscale(100%);
+  -webkit-transition : -webkit-filter 1s;
+}
+
+.portfolioImages:hover {
+  -webkit-filter : grayscale(40%);
+}
+
 .box {
     display: none;
     position: fixed;
