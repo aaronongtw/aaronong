@@ -56,6 +56,9 @@ var startForm = function() {
         levDistance = 10
         if (userInput.match(/.*\b(gitstat|repo|github)/i) != null) {
             loadGit()
+            }
+        else if (userInput.match(/.*\b(portfolio|project|projects|portfolio|apps|websites|website|app)/i) != null) {
+            loadPortfolio()
         }
         else if (userInput.match(/.*\b(contact|get in touch|phone|email|linkedin|linked in|mobile)/i) != null) {
             loadContact()

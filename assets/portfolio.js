@@ -103,7 +103,7 @@ var displayGitInfo = function(info) {
 
     for (var i = 0; i < info.length; i++) {
         var name = info[i].name.split('.')[0]
-        $('#interact').append('<div id="' + name + '" class="repobar">' + name + '</div>')
+        $('#interact').append('<a href=' + info[i].html_url + '><div id="' + name + '" class="repobar">' + name + '</div></a>')
         var barID = '#' + name
         var color;
         if (info[i].language == "JavaScript")
@@ -133,6 +133,7 @@ var gitStats = function(name) {
     }).done(function(commitdata) {
         thisID = '#' + name.split('.')[0]
         $(thisID).on('mouseover', function() {
+            $(this).css('opacity', 1)
             $('#typeBox').html('Desk:  <span class="element"></span>')
             gitAIResponse = "<br>"
             if (commitdata.JavaScript != null)
@@ -145,6 +146,8 @@ var gitStats = function(name) {
                 gitAIResponse += "CSS : " + commitdata.CSS + " Chars <br>"
             if (commitdata.Python != null)
                 gitAIResponse += "Python : " + commitdata.Python + " Chars <br>"
+            if (commitdata.Go != null)
+                gitAIResponse += "Go : " + commitdata.Go + " Chars <br>"
             AIresponse([gitAIResponse])
         })
     })
@@ -200,5 +203,18 @@ var loadSkills = function() {
     })
     $('#interact').append('<div id="skills"><div id="skillmap"><div class="skills-wrapper"><div class="skills-sunburst"></div><div class="skills-chart"><div id="skills-chart-breadcrumb"></div></div></div></div></div><script type="text/javascript">d3.select(self.frameElement).style("height", "400px");</script>')
     startSkilld3()
+    minimizeAI()
+}
+
+var loadPortfolio = function() {
+    location.hash = "portfolio"
+    titleType('Portfolio')
+    AIresponse(['Loading Portfolio', 'Done!'])
+    $('#interact').css({
+        'width': '90%',
+        'height': '50%',
+        'margin': 'auto'
+    })
+    $('#interact').append('<h1>under construction')
     minimizeAI()
 }
