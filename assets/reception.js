@@ -46,7 +46,6 @@ var startForm = function() {
     $('form').on('submit', function(e) {
         // if ($('#userInput').val().length > 400) {
         //     $('#typeBox').html('Desk:  <span class="element"></span>')
-                
         // }
         clearScreen()
         e.preventDefault()
@@ -112,7 +111,7 @@ var startForm = function() {
                     } else if (responses[responseID] == "!Time") {
                         var dt = new Date();
                         var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-                        AIresponse(['The time now is ' + time])                        
+                        AIresponse(['The time now is ' + time])
                     } else {
                         AIresponse([responses[responseID]])
                     }

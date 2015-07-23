@@ -45,10 +45,9 @@ a {
 
 
 #userButtons {
-  display:inline-block;
-  position: absolute;
-  right:-21px;
-  top: 92%;
+  position: fixed;
+  left: 20px;
+  top: 20px;
   color: rgba(0,0,0,0.5);
 }
 
