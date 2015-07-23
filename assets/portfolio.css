@@ -45,6 +45,8 @@ a {
 
 
 #userButtons {
+  display: none;
+  font-size: 150%;
   position: fixed;
   left: 20px;
   top: 20px;
