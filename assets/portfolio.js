@@ -20,7 +20,7 @@ $(document).ready(function() {
         var autoStart = setTimeout(function() {
             startAI()
             startForm()
-        }, 6000)
+        }, 12000)
 
         $('#begin').on('mouseover', function() {
             whiteOUt = TweenMax.to('.whiteout', 1, {

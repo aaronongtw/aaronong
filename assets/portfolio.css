@@ -18,6 +18,7 @@ a {
   color:black;
 }
 
+
 .portfolioImages {
   display:inline-block;
   height:100px;
@@ -66,7 +67,8 @@ a {
 }
 
 .whiteout {
-    color: rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 50%;
 }
 
 #interact {
