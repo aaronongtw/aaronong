@@ -77,7 +77,7 @@ var startAI = function() {
     $('.fa-list').on('click', function() {
         lsButton()
     })
-    $('.userButtons').css('display','block')
+    $('#userButtons').css('display','block')
 
 }
 
