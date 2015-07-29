@@ -218,5 +218,16 @@ var loadPortfolio = function() {
         'height': '50%',
         'margin': 'auto'
     })
-    $('#interact').append('<a href="http://skribbleme.herokuapp.com"><img class="portfolioImages" src="assets/images/skribble.png"></a><a href="http://clawofnoms.herokuapp.com"><img class="portfolioImages" src="assets/images/claw.png"></a><a href="http://ottadd.herokuapp.com"><img class="portfolioImages" src="assets/images/ottadd.png"></a><a href="aaronongtw.github.io/dungeonEscape"><img class="portfolioImages" src="assets/images/dungeon.png"></a><a href="aaronongtw.github.io/TaoOfProgramming"><img class="portfolioImages" src="assets/images/tao.png"></a><a href="aaronongtw.github.io/hug"><img class="portfolioImages" src="assets/images/hug.png"></a>')
+    $('#interact').append('<a id="skrib" href="http://skribbleme.herokuapp.com"><img class="portfolioImages" src="assets/images/skribble.png"></a><a id="claw" href="http://clawofnoms.herokuapp.com"><img class="portfolioImages" src="assets/images/claw.png"></a><a id="ottadd" href="http://ottadd.herokuapp.com"><img class="portfolioImages" src="assets/images/ottadd.png"></a><a id="descape" href="aaronongtw.github.io/dungeonEscape"><img class="portfolioImages" src="assets/images/dungeon.png"></a><a id="tao" href="aaronongtw.github.io/TaoOfProgramming"><img class="portfolioImages" src="assets/images/tao.png"></a><a id="hug" href="aaronongtw.github.io/hug"><img class="portfolioImages" src="assets/images/hug.png"></a>')
+    $('#skrib').on('mouseover', function() {
+        AIresponse(["Skribble me is a rails app that allows users to list skribblings and blankspaces. Both ends of users are allowed to make requests to participate in the others. Eg. Bob intends to advertise on sidewalks along Pitt Street. He can make a collective request to all sidewalks on Pitt Street that are listed on Skribble me."])
+    })
+    $('#claw').on('mouseover', function() {
+        AIresponse(["ClawOfNoms is a reward based minigame app. If they manage to maintain a highscore for an allocated period, they are rewarded with coins that may be used on the Claw Of Noms. The claw gives users a chance to all sorts of prizes ranging from teddy bear achievements to a free coffee down the road."])
+    })
+    $('#ottadd').on('mouseover', function() {
+        AIresponse(["OttaDD was one of my first rails projects. Inspired by frustration of repetition of setting up rails projects. OttaDD allows users to draw their models for database and then generate either a step-by-step tutorial or a ruby file that constructs a custom boiler plate for their projects."])
+    })
 }
+
+
