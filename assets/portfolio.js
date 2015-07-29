@@ -17,10 +17,10 @@ $(document).ready(function() {
         }
     } else {
 
-        var autoStart = setTimeout(function() {
-            startAI()
-            startForm()
-        }, 12000)
+        // var autoStart = setTimeout(function() {
+        //     startAI()
+        //     startForm()
+        // }, 12000)
 
         $('#begin').on('mouseover', function() {
             whiteOUt = TweenMax.to('.whiteout', 1, {
